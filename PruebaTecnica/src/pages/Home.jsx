@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import BookForm from '../components/BookForm';
 import BookList from '../components/BooksList';
 import { getBooks, createBook, updateBook, deleteBook } from '../services/bookService';
+import './Home.css';
 
 export default function Home() {
   const [books, setBooks] = useState([]);
@@ -32,10 +33,11 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10">
-      <h1 className="text-2xl font-bold mb-4">Gestión de Libros</h1>
+    <div className="home-container">
+      <h1 className="home-title">Gestión de Libros</h1>
       <BookForm onSubmit={handleAddOrEdit} bookToEdit={editingBook} />
       <BookList books={books} onEdit={setEditingBook} onDelete={handleDelete} />
     </div>
   );
 }
+

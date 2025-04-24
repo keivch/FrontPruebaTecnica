@@ -18,26 +18,27 @@ export default function BookForm({ onSubmit, bookToEdit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit}>
       <input
         name="title"
         value={book.title}
         onChange={handleChange}
         placeholder="Título"
-        className="border p-2 mr-2"
+        className="form-input"
         required
       />
       <input
-        name="autor"
+        name="author"
         value={book.author}
         onChange={handleChange}
         placeholder="Autor"
-        className="border p-2 mr-2"
+        className="form-input"
         required
       />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
+      <button type="submit" className="submit-btn">
         {bookToEdit ? 'Actualizar' : 'Agregar'}
       </button>
     </form>
   );
 }
+
