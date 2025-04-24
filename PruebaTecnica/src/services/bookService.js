@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/books'; // cambia según tu backend
+const API_URL = 'https://backendpruebatecnica.onrender.com/books'; // cambia según tu backend
 
 export const getBooks = () => axios.get(API_URL);
 export const createBook = (book) => axios.post(API_URL, book);
