@@ -1,4 +1,4 @@
-import './BookList.css';
+import './Booklist.css';
 
 export default function BookList({ books, onEdit, onDelete }) {
   if (!Array.isArray(books)) return <p>No hay libros disponibles.</p>;
