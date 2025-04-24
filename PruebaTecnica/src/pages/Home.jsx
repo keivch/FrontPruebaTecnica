@@ -1,8 +1,13 @@
-import { useEffect, useState } from 'react';
-import BookForm from '../components/BookForm';
-import BookList from '../components/BooksList';
-import { getBooks, createBook, updateBook, deleteBook } from '../services/bookService';
-import './Home.css';
+import { useEffect, useState } from "react";
+import BookForm from "../components/BookForm";
+import BookList from "../components/BooksList";
+import {
+  getBooks,
+  createBook,
+  updateBook,
+  deleteBook,
+} from "../services/bookService";
+import "./Home.css";
 
 export default function Home() {
   const [books, setBooks] = useState([]);
@@ -36,8 +41,8 @@ export default function Home() {
     <div className="home-container">
       <h1 className="home-title">Gestión de Libros</h1>
       <BookForm onSubmit={handleAddOrEdit} bookToEdit={editingBook} />
+      <div className="spacer" />
       <BookList books={books} onEdit={setEditingBook} onDelete={handleDelete} />
     </div>
   );
 }
-
